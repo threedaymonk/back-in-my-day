@@ -1,0 +1,50 @@
+diff --git a/file.c b/file.c
+index 8b01044..2ed9f8a 100644
+--- a/file.c
++++ b/file.c
+@@ -391,32 +391,6 @@ rb_file_lstat(obj)
+ #endif
+ }
+ 
+-static int
+-group_member(gid)
+-    GETGROUPS_T gid;
+-{
+-#if !defined(NT)
+-    if (getgid() ==  gid)
+-	return Qtrue;
+-
+-# ifdef HAVE_GETGROUPS
+-#  ifndef NGROUPS
+-#    define NGROUPS 32
+-#  endif
+-    {
+-	GETGROUPS_T gary[NGROUPS];
+-	int anum;
+-
+-	anum = getgroups(NGROUPS, gary);
+-	while (--anum >= 0)
+-	    if (gary[anum] == gid)
+-		return Qtrue;
+-    }
+-# endif
+-#endif
+-    return Qfalse;
+-}
+-
+ #ifndef S_IXUGO
+ #  define S_IXUGO		(S_IXUSR | S_IXGRP | S_IXOTH)
+ #endif
+diff --git a/parse.y b/parse.y
+index 2594f9b..11cae30 100644
+--- a/parse.y
++++ b/parse.y
+@@ -667,7 +667,7 @@ arg		: lhs '=' arg
+ 			value_expr($3);
+ 			$$ = node_assign($1, $3);
+ 		    }
+-		| variable tOP_ASGN {$$ = assignable($1, 0);} arg
++		| variable tOP_ASGN {$<node>$ = assignable($1, 0);} arg
+ 		    {
+ 			if ($<node>3) {
+ 			    if ($2 == tOROP) {
