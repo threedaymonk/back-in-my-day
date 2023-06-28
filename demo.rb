@@ -5,7 +5,7 @@ require "movie"
 
 def filter(movies)
   movies
-    .select { |m| m.title.match?(/godzilla|gojira/i) && m.score >= 6.5 }
+    .select { |m| m.title =~ /godzilla|gojira/i && m.score >= 6.5 }
     .sort_by(&:year)
 end
 
