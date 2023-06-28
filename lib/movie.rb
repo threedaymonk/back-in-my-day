@@ -1,3 +1,5 @@
+# coding = utf-8
+
 Movie = Struct.new(:title, :year, :score, :directors, :actors) do
   def initialize(hash)
     hash.each do |key, value|
