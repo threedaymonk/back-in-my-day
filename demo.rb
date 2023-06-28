@@ -6,7 +6,7 @@ require "movie"
 def filter(movies)
   movies.
     select { |m| m.title =~ /godzilla|gojira/i && m.score >= 6.5 }.
-    sort_by(&:year)
+    sort_by { |m| m.year }
 end
 
 movies = Datastore::Collection.new("kaiju.json", Movie)
