@@ -1,4 +1,4 @@
-Movie = Data.define(:title, :year, :score, :directors, :actors) do
+Movie = Struct.new(:title, :year, :score, :directors, :actors, keyword_init: true) do
   def to_s
     <<~STRING
       #{title}
