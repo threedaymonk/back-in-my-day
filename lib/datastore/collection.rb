@@ -6,7 +6,7 @@ module Datastore
     include Enumerable
 
     def initialize(path, item_class)
-      @items = JSON.load(File.read(path))
+      @items = JSON.load(File.open(path, "r") { |f| f.read })
       @item_class = item_class
     end
 
