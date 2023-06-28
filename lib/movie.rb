@@ -17,7 +17,8 @@ Movie = Struct.new(:title, :year, :score, :directors, :actors) do
 STRING
   end
 
-  private def stars
+private
+  def stars
     ("⭐" * score.floor).ljust(10, "・")
   end
 end
