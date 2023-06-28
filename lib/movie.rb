@@ -9,5 +9,7 @@ Movie = Struct.new(:title, :year, :score, :directors, :actors, keyword_init: tru
     STRING
   end
 
-  private def stars = ("⭐" * score.floor).ljust(10, "・")
+  private def stars
+    ("⭐" * score.floor).ljust(10, "・")
+  end
 end
