@@ -4,9 +4,9 @@ require "datastore/collection"
 require "movie"
 
 def filter(movies)
-  movies
-    .select { |m| m.title =~ /godzilla|gojira/i && m.score >= 6.5 }
-    .sort_by(&:year)
+  movies.
+    select { |m| m.title =~ /godzilla|gojira/i && m.score >= 6.5 }.
+    sort_by(&:year)
 end
 
 movies = Datastore::Collection.new("kaiju.json", Movie)
