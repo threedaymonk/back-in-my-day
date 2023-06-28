@@ -1,4 +1,4 @@
-$LOAD_PATH.unshift File.join(__dir__, "lib")
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), "lib")
 
 require "datastore/collection"
 require "movie"
