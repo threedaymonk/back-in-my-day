@@ -19,6 +19,6 @@ STRING
 
 private
   def stars
-    ("⭐" * score.floor).ljust(10, "・")
+    ("⭐" * score.floor) + ("・" * (10 - score.floor))
   end
 end
