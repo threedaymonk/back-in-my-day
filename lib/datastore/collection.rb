@@ -10,6 +10,6 @@ class Datastore::Collection
   end
 
   def each
-    @items.each { |h| yield @item_class.new(**h) }
+    @items.each { |h| yield @item_class.new(h) }
   end
 end

@@ -1,4 +1,10 @@
-Movie = Struct.new(:title, :year, :score, :directors, :actors, keyword_init: true) do
+Movie = Struct.new(:title, :year, :score, :directors, :actors) do
+  def initialize(hash)
+    hash.each do |key, value|
+      send "#{key}=", value
+    end
+  end
+
   def to_s
     <<STRING
 #{title}
