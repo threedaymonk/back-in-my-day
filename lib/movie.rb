@@ -1,6 +1,8 @@
 # coding = utf-8
 
-Movie = Struct.new(:title, :year, :score, :directors, :actors) do
+class Movie
+  attr_accessor :title, :year, :score, :directors, :actors
+
   def initialize(hash)
     hash.each do |key, value|
       send "#{key}=", value
