@@ -9,7 +9,7 @@ Brighton Ruby Conference 2023
 # About this repository
 
 This describes the modification of a program while travelling back in time
-from Ruby 3.2.2 (2023) to Ruby 1.6.8 (released at the end of 2022).
+from Ruby 3.2.2 (2023) to Ruby 1.6.8 (released at the end of 2002).
 
 Each successfully modified version is tagged.
 
