@@ -24,8 +24,8 @@ Each successfully modified version is tagged.
 
 # Running older versions
 
-I use [asdf](https://asdf-vm.com/) and its Ruby plugin, which uses
-[ruby-build](https://github.com/rbenv/ruby-build) to build each version.
+I use [asdf][asdf] and its Ruby plugin, which uses
+[ruby-build][ruby-build] to build each version.
 
 The two oldest versions required special attention:
 
@@ -44,17 +44,42 @@ be built with:
 
 The provided script `run.sh` handles running the code inside the container.
 
+See also the [all-ruby][all-ruby] project for another way to do this, that
+works all the way back to Ruby 0.49.
+
 # References
 
-- [Significant new features since version
-  2.0](https://rubyreferences.github.io/rubychanges/evolution.html)
-- [List of major changes from 2.0 to
-  2.7](https://www.rubyguides.com/ruby-version-changes/)
-- [Changes in 1.8](https://viewsourcecode.org/why/hacking/rubyOneEightOh.html)
-- [Changes in 1.9](https://stackoverflow.com/questions/21574/what-is-the-difference-between-ruby-1-8-and-ruby-1-9)
-- [Current Ruby source](https://github.com/ruby/ruby)
-- [Git mirror of the old Ruby Subversion repository](https://github.com/tmm1/matzruby).
-  This includes older versions missing from the official repository.
+- [asdf][asdf] is a multiple runtime version manager, like rbenv or rvm but
+  supporting many more runtimes
+- [ruby-build][ruby-build] "simplifies installation of any Ruby version from
+  source on Unix-like systems." Not quite any version, but it works as far back
+  as 1.8
+- [Significant new features since version 2.0][evolution]
+- [List of major changes from 2.0 to 2.7][version-changes]
+- [Changes in 1.8][one-eight-oh]
+- [Changes in 1.9][differences-1-8-and-1-9]
+- [Current Ruby source][git-source]
+- [Git mirror of the old Ruby Subversion repository][git-svn-mirror].
+  This includes older versions missing from the official repository
+- [ruby-lang FTP server][ruby-ftp].
+  This includes releases not listed on the website, all the way back to 1.0.
+  Thanks to [Leah Neukirchen][leah-neukirchen]
+- [all-ruby][all-ruby], a project that builds and runs Ruby versions back to
+  0.49. Thanks to [Matias Korhonen][matias-korhonen], who appears to have given a
+  similar talk at RubyConfBY in 2020
+
+[asdf]: https://asdf-vm.com/
+[ruby-build]: https://github.com/rbenv/ruby-build
+[evolution]: https://rubyreferences.github.io/rubychanges/evolution.html
+[version-changes]: https://www.rubyguides.com/ruby-version-changes/
+[one-eight-oh]: https://viewsourcecode.org/why/hacking/rubyOneEightOh.html
+[differences-1-8-and-1-9]: https://stackoverflow.com/questions/21574/what-is-the-difference-between-ruby-1-8-and-ruby-1-9
+[git-source]: https://github.com/ruby/ruby
+[git-svn-mirror]: https://github.com/tmm1/matzruby
+[ruby-ftp]: https://ftp.ruby-lang.org/pub/ruby/
+[leah-neukirchen]: https://leahneukirchen.org/
+[all-ruby]: https://github.com/akr/all-ruby
+[matias-korhonen]: https://matiaskorhonen.fi/
 
 # Changes addressed in this talk
 
