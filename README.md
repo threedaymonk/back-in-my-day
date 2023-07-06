@@ -8,6 +8,10 @@ Brighton Ruby Conference 2023
 
 # About this repository
 
+This accompanies a lightning talk I gave at [Brighton Ruby Conference
+2023][brighton-ruby]. A [transcript of the talk][transcript] can be found
+on my website.
+
 This describes the modification of a program while travelling back in time
 from Ruby 3.2.2 (2023) to Ruby 1.6.8 (released at the end of 2002).
 
@@ -49,6 +53,8 @@ works all the way back to Ruby 0.49.
 
 # References
 
+- [Brighton Ruby Conference][brighton-ruby]
+- [Transcript of this talk][transcript]
 - [asdf][asdf] is a multiple runtime version manager, like rbenv or rvm but
   supporting many more runtimes
 - [ruby-build][ruby-build] "simplifies installation of any Ruby version from
@@ -68,6 +74,8 @@ works all the way back to Ruby 0.49.
   0.49. Thanks to [Matias Korhonen][matias-korhonen], who appears to have given a
   similar talk at RubyConfBY in 2020
 
+[brighton-ruby]: https://brightonruby.com/
+[transcript]: https://po-ru.com/talks/bimd
 [asdf]: https://asdf-vm.com/
 [ruby-build]: https://github.com/rbenv/ruby-build
 [evolution]: https://rubyreferences.github.io/rubychanges/evolution.html
